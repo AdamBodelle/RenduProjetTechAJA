@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Protocole</th>
+        <th>Flag</th>
+        <th>Octet source</th>
+        <th>Octet destination</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for packet in packets %}
+        <tr>
+          <td>{{ packet.id }}</td>
+          <td>{{ packet.type }}</td>
+          <td>{{ packet.protocol }}</td>
+          <td>{{ packet.flag }}</td>
+          <td>{{ packet.src_bytes }}</td>
+          <td>{{ packet.dst_bytes }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <form action="/">
+      <input type="submit" value="Actualiser" />
+  </form>
+
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#data').DataTable({
+        columns: [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null]
+      });
+    });
+  </script>
+{% endblock %}
+
