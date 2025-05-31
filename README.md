@@ -4,6 +4,6 @@
 
 Exécuter en premier web_app.py afin de lancer d'interface web
 
-Puis éxécuter script_caprture.py afin d'analyser les paquets réseaux
+Puis exécuter script_caprture.py afin d'analyser les paquets réseaux
 
 Les résultats des prédictions de l'IA seront disponible sur l'interface web, avec les informations des paquets analysés
